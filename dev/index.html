@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RSM Project</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    
+    <main id="main_container" class="rsm_nasa">
+        <form action="get" class="rsm_nasa__form">
+            <div class="rsm_nasa__form__row">
+                <label for="latlon" class="rsm_nasa__form__label">Coordinates:</label>
+                <input type="text" class="rsm_nasa__form__input" id="latlon" name="latlon" placeholder="longitude;latitude ex: -95.33;29.78">
+            </div>
+            <button type="submit" class="rsm_nasa__form__button">Search</button>
+        </form>
+        <section class="rsm_nasa__result">
+            <figure class="rsm_nasa__result__container">
+                <img src="" alt="" class="rsm_nasa__result__image">
+            </figure>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
 </body>
 </html>
