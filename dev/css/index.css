@@ -30,26 +30,29 @@ body {
 }
 .rsm_nasa__form__button {
   background-color: #01110A;
-  color: #D5F2E3;
   border-radius: 5px;
-  padding: 5px;
+  color: #D5F2E3;
+  margin-top: 10px;
+  padding: 10px 25px;
 }
 .rsm_nasa__form__input {
   border-radius: 5px;
   height: 30px;
   margin-top: 5px;
+  margin-left: 5px;
+  max-width: 55%;
   padding: 0 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 .rsm_nasa__form__label {
-  margin-right: 5px;
+  width: 32%;
 }
 .rsm_nasa__form__message {
   border: none;
   border-radius: 5px;
+  line-height: 1.5;
   padding: 10px;
+  text-align: center;
+  width: 30%;
 }
 .rsm_nasa__form__message--info {
   border: 1px solid #003E1F;
@@ -68,6 +71,15 @@ body {
       flex-wrap: wrap;
   margin-bottom: 10px;
   text-align: left;
+}
+.rsm_nasa__form__search_icon {
+  -webkit-animation: load 3s linear infinite;
+          animation: load 3s linear infinite;
+  vertical-align: middle;
+  width: 5%;
+}
+.rsm_nasa__title {
+  text-transform: uppercase;
 }
 .rsm_nasa__result {
   max-width: 600px;
@@ -112,4 +124,26 @@ body {
           box-sizing: border-box;
   height: 33.33%;
   width: 33.33%;
+}
+
+@-webkit-keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }

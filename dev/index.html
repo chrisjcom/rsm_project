@@ -9,18 +9,19 @@
 </head>
 <body>
     <main id="main_container" class="rsm_nasa">
+        <h1 class="rsm_nasa__title">RSM Project</h1>
         <form action="get" class="rsm_nasa__form">
             <div class="rsm_nasa__form__row">
                 <label for="latlon" class="rsm_nasa__form__label">Coordinates:</label>
                 <input type="text" class="rsm_nasa__form__input" id="latlon" name="latlon" placeholder="longitude;latitude ex: -89.25;13.66" required>
             </div>
             <div class="rsm_nasa__form__row">
-                <label for="search_date" class="rsm_nasa__form__label">Date:</label>
+                <label for="search_date" class="rsm_nasa__form__label">Select Date:</label>
                 <input type="date" placeholder="dd-mm-yyyy" class="rsm_nasa__form__input" id="search_date" name="search_date" min="2014-01-01" max="2022-01-19" required>
             </div>
             <button type="submit" class="rsm_nasa__form__button">Search</button>
-            <p class="rsm_nasa__form__message"></p>
         </form>
+        <p class="rsm_nasa__form__message"></p>
         <section class="rsm_nasa__result">
             <figure class="rsm_nasa__result__container">
                 <img src="" alt="" class="rsm_nasa__result__image">

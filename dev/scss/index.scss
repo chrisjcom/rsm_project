@@ -31,27 +31,32 @@ body {
 
         &__button {
             background-color: $button_background;
-            color: $primary_background;
             border-radius: 5px;
-            padding: 5px;
+            color: $primary_background;
+            margin-top: 10px;
+            padding: 10px 25px;
         }
 
         &__input {
             border-radius: 5px;
             height: 30px;
             margin-top: 5px;
+            margin-left: 5px;
+            max-width: 55%;
             padding: 0 10px;
-            width: fit-content;
         }
 
         &__label {
-            margin-right: 5px;
+            width: 32%;
         }
 
         &__message {
             border: none;
             border-radius: 5px;
+            line-height: 1.5;
             padding: 10px;
+            text-align: center;
+            width: 30%;
 
             &--info {
                 border: 1px solid $info;
@@ -70,6 +75,15 @@ body {
             text-align: left;
         }
 
+        &__search_icon {
+            animation: load 3s linear infinite;
+            vertical-align: middle;
+            width: 5%;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
     }
 
     &__result {
@@ -116,3 +130,8 @@ body {
         }
     }
 }
+
+@keyframes load {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
