@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+body {
+  background-color: #D5F2E3;
+}
+
+#main_container {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.rsm_nasa {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.rsm_nasa__form {
+  padding: 10px;
+  text-align: center;
+}
+.rsm_nasa__form__button {
+  background-color: #01110A;
+  color: #D5F2E3;
+  border-radius: 5px;
+  padding: 5px;
+}
+.rsm_nasa__form__input {
+  border-radius: 5px;
+  height: 30px;
+  margin-top: 5px;
+  padding: 0 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.rsm_nasa__form__label {
+  margin-right: 5px;
+}
+.rsm_nasa__form__message {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+.rsm_nasa__form__message--info {
+  border: 1px solid #003E1F;
+}
+.rsm_nasa__form__message--error {
+  border: 1px solid #BA2D0B;
+}
+.rsm_nasa__form__row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.rsm_nasa__result {
+  max-width: 600px;
+}
+.rsm_nasa__result__container {
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+.rsm_nasa__result__image {
+  width: 100%;
+}
+.rsm_nasa__result__placeholder {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10%;
+}
+.rsm_nasa__result__tiles {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.rsm_nasa__result__tile {
+  background-color: transparent;
+  border: solid 1px #cccccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 33.33%;
+  width: 33.33%;
+}

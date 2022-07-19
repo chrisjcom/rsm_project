@@ -18,16 +18,16 @@ function load() {
         let input_value = search_input.value.trim();
         let date_value = date_input.value;
         let [longitude, latitude] = input_value.split(";");
-        // console.log({date_value,search_date})
+
         if(typeof latitude == "undefined" || latitude == '') {
             addFormMessage("Error: You entered a wrong latitude or you entered a wrong format", "error");
         } else {
             fetch(`${url}?lon=${longitude.trim()}&lat=${latitude.trim()}&date=${date_value}&dim=${dim}&api_key=${api_key}`)
             .then(response => response.json())
             .then(response => {
-                addFormMessage("","info", 0)
                 if(response.hasOwnProperty('url')) {
                     result_image.src = response.url;
+                    addFormMessage("","info", 0)
                 } else {
                     addFormMessage("Error: "+response.msg, "error");
                 }
@@ -39,8 +39,9 @@ function load() {
     })
 }
 
-function addFormMessage(message, type='info', msgTime = 3000 ) {
+function addFormMessage(message, type = "info", msgTime = 5000 ) {
     form_message.innerHTML = message;
+    console.log({message, type, msgTime});
     if(msgTime == 0) {
         if(form_message.classList.contains(`rsm_nasa__form__message--${type}`)) {
             form_message.classList.remove(`rsm_nasa__form__message--${type}`)
@@ -51,7 +52,8 @@ function addFormMessage(message, type='info', msgTime = 3000 ) {
         form_message.classList.add(`rsm_nasa__form__message--${type}`)
         setInterval(() => {
             form_message.innerHTML = "";
-            form_message.classList.remove(`rsm_nasa__form__message--${type}`)
+            form_message.classList.remove(`rsm_nasa__form__message--info`)
+            form_message.classList.remove(`rsm_nasa__form__message--error`)
         }, msgTime)
     }
 }
