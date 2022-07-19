@@ -4,7 +4,7 @@
 
 **Step 1:** Go to the folder where you will clone the project and open a terminal
 
-On your terminal write the follow instructions:
+On your terminal write the following instructions:
 
 ```bash
 git clone https://github.com/chrisjcom/rsm_project.git
@@ -12,7 +12,7 @@ git clone https://github.com/chrisjcom/rsm_project.git
 
 ## Install dependencies
 
-**Step 2:** The project dependencies will be installed running the follow command in your terminal inside the folder of the project.
+**Step 2:** The project dependencies will be installed running the next command in your terminal inside the folder of the project.
 
 ```bash
 npm install
