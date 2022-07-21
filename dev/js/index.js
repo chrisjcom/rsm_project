@@ -2,12 +2,12 @@
 const url = "https://api.nasa.gov/planetary/earth/assets";
 const api_key = "BejZa0HMnDBA7j6noiXPNNaNcY8jJ7q3OWYc8Tii";
 const dim = 0.08;
+const date_value = '2021-01-01';
 
 /* HTML Elements */
 const search_form = document.querySelector(".rsm_nasa__form");
 const search_input = document.querySelector("#latlon");
 const result_image = document.querySelector(".rsm_nasa__result__image");
-const date_input = document.querySelector("#search_date");
 const form_message = document.querySelector(".rsm_nasa__form__message");
 
 window.onload = load;
@@ -24,12 +24,12 @@ function getData (event) {
     result_image.src = "";
     addFormMessage("<img src='assets/loading.png' class='rsm_nasa__form__search_icon'> Searching...","info", 0);
     let input_value = search_input.value.trim();
-    let date_value = date_input.value;
-    let [longitude, latitude] = input_value.split(";");
+    let [latitude, longitude] = input_value.split(";");
 
     if(typeof latitude == "undefined" || latitude == '') {
         addFormMessage("Error: You entered a wrong latitude or you entered a wrong format", "error");
     } else {
+        console.log(`${url}?lon=${longitude.trim()}&lat=${latitude.trim()}&date=${date_value}&dim=${dim}&api_key=${api_key}`);
         fetch(`${url}?lon=${longitude.trim()}&lat=${latitude.trim()}&date=${date_value}&dim=${dim}&api_key=${api_key}`)
         .then(response => response.json())
         .then(response => {
